@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuaraWarga AI - Asisten Pintar</title>
+    <!-- Konfigurasi PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#090310">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="noise-overlay"></div>
+
+    <section id="landingPage" class="landing-section">
+        <div class="glass-panel landing-content">
+            <div class="logo-icon">✨</div>
+            <h1>SuaraWarga <span class="highlight">AI</span></h1>
+            <p>Sistem asisten virtual cerdas. Membantu Anda menavigasi layanan publik dengan panduan visual dan suara interaktif secara akurat dan mandiri.</p>
+            <button class="start-btn" onclick="masukAplikasi()">Mulai Eksplorasi ➔</button>
+        </div>
+    </section>
+
+    <div id="mainApp" style="display: none;">
+        <header class="app-header">
+            <h2>Menu Kategori Layanan</h2>
+            <p>Pilih salah satu modul layanan di bawah ini.</p>
+        </header>
+
+        <section class="cards-section">
+            <div class="card-slider">
+                <div class="card glass-panel" onclick="openModal('bansos')">
+                    <div class="card-icon">🤝</div>
+                    <h3>Bansos</h3>
+                </div>
+                <div class="card glass-panel" onclick="openModal('kesehatan')">
+                    <div class="card-icon">🩺</div>
+                    <h3>Kesehatan</h3>
+                </div>
+                <div class="card glass-panel" onclick="openModal('bencana')">
+                    <div class="card-icon">🚨</div>
+                    <h3>Bencana</h3>
+                </div>
+                <div class="card glass-panel" onclick="openModal('administrasi')">
+                    <div class="card-icon">🪪</div>
+                    <h3>Administrasi</h3>
+                </div>
+                <div class="card glass-panel" onclick="openModal('pendidikan')">
+                    <div class="card-icon">🎓</div>
+                    <h3>Pendidikan</h3>
+                </div>
+                <div class="card glass-panel" onclick="openModal('pengaduan')">
+                    <div class="card-icon">📢</div>
+                    <h3>Pengaduan</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="explanation-section" id="explanationArea">
+            <div class="explanation-container glass-panel">
+                <div class="video-side">
+                    <div class="video-wrapper">
+                        <div id="youtubePlayer"></div>
+                    </div>
+                    <button class="control-btn" id="playPauseBtn" onclick="toggleVideo()">⏸ Jeda Penjelasan</button>
+                </div>
+                
+                <div class="text-side">
+                    <h2 id="activeQuestionTitle">Judul Pertanyaan</h2>
+                    <div class="answer-box">
+                        <ul class="step-list" id="activeAnswerList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal-overlay" id="blurOverlay">
+        <div class="modal-content glass-panel">
+            <button class="close-btn" onclick="closeModal()">✖</button>
+            <h2 id="modalTitle">Pilih Pertanyaan</h2>
+            <div id="questionList" class="question-list">
+            </div>
+            <button class="more-btn" id="btnMore" onclick="showMoreQuestions()">Muat Lebih Banyak Pertanyaan ⬇</button>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>

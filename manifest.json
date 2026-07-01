@@ -1,0 +1,16 @@
+{
+  "name": "SuaraWarga AI",
+  "short_name": "SuaraWarga",
+  "description": "Asisten Pintar Layanan Publik Berbasis Suara",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#090310",
+  "theme_color": "#E00078",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/8636/8636994.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
