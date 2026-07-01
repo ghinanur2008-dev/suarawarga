@@ -1,6 +1,6 @@
 :root {
-    --bg-dark: #090310; /* Latar sangat gelap keunguan */
-    --accent-magenta: #E00078; /* Sesuai referensi gambar */
+    --bg-dark: #090310;
+    --accent-magenta: #E00078;
     --accent-purple: #7000FF;
     --text-light: #F8FAFC;
     --text-muted: #94A3B8;
@@ -62,8 +62,18 @@ body {
     scroll-snap-type: x mandatory; scrollbar-width: none;
 }
 .card {
-    min-width: 180px; padding: 30px 20px; border-radius: 24px; scroll-snap-align: center;
-    cursor: pointer; text-align: center; transition: 0.3s;
+    min-width: 150px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 24px;
+    scroll-snap-align: center;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
 }
 .card:hover { border-color: var(--accent-magenta); transform: translateY(-10px); background: rgba(224, 0, 120, 0.1); }
 .card-icon { font-size: 3.5rem; margin-bottom: 15px; }
