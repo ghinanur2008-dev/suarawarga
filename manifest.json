@@ -2,7 +2,7 @@
   "name": "SuaraWarga AI",
   "short_name": "SuaraWarga",
   "description": "Asisten Pintar Layanan Publik Berbasis Suara",
-  "start_url": "/index.html",
+  "start_url": "/suarawarga/index.html",
   "display": "standalone",
   "background_color": "#090310",
   "theme_color": "#E00078",
