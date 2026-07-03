@@ -1,7 +1,7 @@
-const CACHE_NAME = 'suarawarga-cache-v5'; // Naikkan versi ke v5 agar HP memaksa update
+const CACHE_NAME = 'suarawarga-cache-v5';
 const urlsToCache = [
-  '/suarawarga/',              // Alamat utama folder kamu
-  '/suarawarga/index.html',    // Tambahkan /suarawarga/ di depan semua file
+  '/suarawarga/',
+  '/suarawarga/index.html',
   '/suarawarga/style.css',
   '/suarawarga/script.js'
 ];
@@ -15,7 +15,7 @@ self.addEventListener('install', event => {
   );
 });
 
-// Menambahkan kode untuk membersihkan cache lama saat versi baru aktif
+// Membersihkan cache lama saat versi baru aktif
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
